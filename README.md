@@ -475,3 +475,133 @@ bash: $'\302\201\302\201git': command not found
 
 Muthu@THE_RAIN MINGW32 /d/github (firstbranch)
 $ git checkout firstbranch
+
+Muthu@THE_RAIN MINGW32 /d/github (firstbranch)
+$ git checkout master
+Switched to branch 'master'
+M       README.md
+
+Muthu@THE_RAIN MINGW32 /d/github (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        revert.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Muthu@THE_RAIN MINGW32 /d/github (master)
+$ git add revert.txt
+
+Muthu@THE_RAIN MINGW32 /d/github (master)
+$ git commit -m "revert.txt"
+[master 4bb3b1d] revert.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 revert.txt
+
+Muthu@THE_RAIN MINGW32 /d/github (master)
+$ git commit -a -m "reverttt"
+[master 081dc3a] reverttt
+ 2 files changed, 478 insertions(+), 3 deletions(-)
+ rewrite README.md (100%)
+
+Muthu@THE_RAIN MINGW32 /d/github (master)
+$ git log
+commit 081dc3a0e5c87d1146733a4b4bf64869f38d2fa3 (HEAD -> master)
+Author: mvravce <mvr_avce@yahoo.co.in>
+Date:   Sat Jun 17 13:29:54 2017 +0530
+
+    reverttt
+
+commit 4bb3b1dca9fe65f9b926622d35806d05b585212c
+Author: mvravce <mvr_avce@yahoo.co.in>
+Date:   Sat Jun 17 13:28:52 2017 +0530
+
+    revert.txt
+
+commit 5f285d08a24725b797dc052ee72169197ca3553d (orgin/master, orgin/firstbranch                                                                                                                , firstbranch)
+Author: mvravce <mvr_avce@yahoo.co.in>
+Date:   Sat Jun 17 12:53:14 2017 +0530
+
+    addedc two file more
+
+commit e38385457e5af07fa20df39f3045ae943e504c78
+Author: mvravce <mvr_avce@yahoo.co.in>
+Date:   Sat Jun 17 12:46:02 2017 +0530
+
+:
+
+Muthu@THE_RAIN MINGW32 /d/github (master)
+ checkout Date:   Sat Jun 17 12:53:14 2017 +0530
+
+
+bash: gi: command not found
+
+Muthu@THE_RAIN MINGW32 /d/github (master)
+$ Date:   Sat Jun 17 12:53:14 2017 +0530
+bash: Date:: command not found
+
+Muthu@THE_RAIN MINGW32 /d/github (master)
+$
+
+Muthu@THE_RAIN MINGW32 /d/github (master)
+$ git checkout
+
+
+Muthu@THE_RAIN MINGW32 /d/github (master)
+$ Date:   Sat Jun 17 12:53:14 2017 +0530
+bash: Date:: command not found
+
+Muthu@THE_RAIN MINGW32 /d/github (master)
+$
+
+Muthu@THE_RAIN MINGW32 /d/github (master)
+$ git log
+commit 081dc3a0e5c87d1146733a4b4bf64869f38d2fa3 (HEAD -> master)
+Author: mvravce <mvr_avce@yahoo.co.in>
+Date:   Sat Jun 17 13:29:54 2017 +0530
+
+    reverttt
+
+commit 4bb3b1dca9fe65f9b926622d35806d05b585212c
+Author: mvravce <mvr_avce@yahoo.co.in>
+Date:   Sat Jun 17 13:28:52 2017 +0530
+
+    revert.txt
+
+commit 5f285d08a24725b797dc052ee72169197ca3553d (orgin/master, orgin/firstbranch                                                                                                                , firstbranch)
+Author: mvravce <mvr_avce@yahoo.co.in>
+Date:   Sat Jun 17 12:53:14 2017 +0530
+
+    addedc two file more
+
+commit e38385457e5af07fa20df39f3045ae943e504c78
+Author: mvravce <mvr_avce@yahoo.co.in>
+Date:   Sat Jun 17 12:46:02 2017 +0530
+
+:
+
+Muthu@THE_RAIN MINGW32 /d/github (master)
+git checkout 4bb3b1dc "revert.txt"
+bash: t: command not found
+
+Muthu@THE_RAIN MINGW32 /d/github (master)
+$ t checkout 4bb3b1dc revert.txt
+bash: t: command not found
+
+Muthu@THE_RAIN MINGW32 /d/github (master)
+$ git checkout 4bb3b1dc revert.txt
+
+Muthu@THE_RAIN MINGW32 /d/github (master)
+$ cat revert.txt
+revert file
+Muthu@THE_RAIN MINGW32 /d/github (master)
+$
+
